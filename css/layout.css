@@ -1,0 +1,62 @@
+/* This is the basic layout CSS file */
+
+/* This is the header/navigation bar CSS */
+header {
+    display: flex;
+    flex-direction: row;
+}
+
+header>div {
+    margin: 10px;
+    border: solid red;
+    padding: 5px;
+}
+
+header>div>a {
+    color: black;
+    text-decoration: none;
+}
+
+/* CSS for first section (about)*/
+
+#about {
+    display: flex;
+    justify-content: center;
+}
+
+#about p {
+    text-align: center;
+}
+
+#about img {
+    width: 300px;
+    height: 300px;
+}
+
+/* Foods Section */
+
+#foods {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#foods img {
+    max-width: 500px;
+    max-height: 500px;
+}
+
+/* Locations */
+
+#location {
+    display: flex;
+    margin: 10px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+/* Footer */
+
+footer p {
+    text-align: center;
+}
