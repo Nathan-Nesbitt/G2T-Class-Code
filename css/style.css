@@ -1,0 +1,33 @@
+body {
+    background-color: pink;
+}
+
+p {
+    background-color: rgba(211, 118, 106, 0.979);
+    padding: 10px;
+    margin: 10px;
+    border: solid;
+}
+
+h1 {
+    color: purple;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    margin: 40px;
+    text-decoration: underline;
+}
+
+#about {
+    background-color: green;
+}
+
+#foods {
+    background-color: teal;
+}
+
+#location {
+    background-color: cornflowerblue;
+}
+
+#about p {
+    font-size: x-large;
+}
