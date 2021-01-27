@@ -16,6 +16,14 @@ h1 {
     text-decoration: underline;
 }
 
+section {
+    padding: 100px;
+}
+
+/*
+    Select based on ID's
+*/
+
 #about {
     background-color: green;
 }
@@ -28,6 +36,73 @@ h1 {
     background-color: cornflowerblue;
 }
 
+/* 
+    This selects all children paragraph of the #about id tag.
+    
+    <div>
+        <p></p>
+        <div>
+            <p></p>
+        </div>
+    </div>
+
+    Would apply the styling to all the paragraph tags
+*/
+
 #about p {
     font-size: x-large;
+}
+
+/* 
+    This selects only children paragraph tags on the first level 
+    inside of the #foods (id) tag.
+    
+    <div>
+        <p>
+    </div>
+
+    Would apply the styling to all the paragraph tags
+*/
+#foods>p {
+    background-color: green;
+}
+
+/* 
+    This selects all of the sibling paragraph of any h1 tag.
+    
+    <h1><h1>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+
+    Would apply the styling to all the paragraph tags
+*/
+h1~p {
+    font-size: 12px;
+}
+
+/* 
+    This selects the first sibling paragraph of any h1 tag.
+    
+    <h1><h1>
+    <p></p>
+
+    Would apply the styling to *only* the first paragraph tag
+*/
+h1+p {
+    border-style: groove;
+}
+
+/*
+    Classes
+*/
+
+.section {
+    border: solid;
+}
+
+.fav_foods {
+    border: solid;
+    border-radius: 20px;
 }
