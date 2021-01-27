@@ -105,4 +105,7 @@ h1+p {
 .fav_foods {
     border: solid;
     border-radius: 20px;
+    width: 200px;
+    height: 15vh;
+    overflow: hidden;
 }
