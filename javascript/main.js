@@ -41,6 +41,11 @@ num = num * 2;  // Multiply num by 2
 num *= 2;       // Multiply num by 2
 
 // Comparison Operators //
+num = 10;
+
+console.log(num === 10);
+console.log(num !== 29);
+
 
 
 // Loop //
