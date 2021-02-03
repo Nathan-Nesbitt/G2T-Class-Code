@@ -113,3 +113,56 @@ while(increment < 10) { // Check
 for(let i = 0; i < 10; i++)
     console.log("I'm gonna crash")
 
+
+/* Arrays */
+var shopping_list = [];
+
+// Adding items to an array //
+shopping_list.push("Oranges");
+shopping_list.push("Apples");
+shopping_list.push("A large snake called a python");
+shopping_list.push("A new tesla car");
+shopping_list.push("Bananas");
+shopping_list.push("Manga");
+shopping_list.push("PS5");
+shopping_list.push("Gamestop Stocks");
+shopping_list.push("Doritos");
+shopping_list.push("My Crush");
+shopping_list.push("A Hat");
+shopping_list.push("A graphics card");
+
+console.log(shopping_list)
+
+// Getting items from an array 
+var top_item = shopping_list[0];
+console.log(top_item)
+console.log(shopping_list[1]);
+console.log(shopping_list[2]);
+
+// Looping through an array //
+for(let i = 0; i < shopping_list.length; i++) {
+    document.write("<p>Item: " + i + " in our shoppinglist is " + shopping_list[i] + "</p>");
+}
+
+/* Functions */
+var add_element = function(array, element) {
+    array.push(element);
+}
+
+var empty_array = [];
+
+add_element(empty_array, "Pork");
+add_element(empty_array, "Cheese");
+add_element(empty_array, "Legumes");
+add_element(empty_array, "Forks");
+
+console.log(empty_array);
+
+var print_list = function(array) {
+    for(let i = 0; i < array.length; i++) {
+        document.write("<p>Item: " + i + " in our empty array is " + array[i] + "</p>");
+    }
+}
+
+print_list(empty_array);
+print_list(shopping_list);
