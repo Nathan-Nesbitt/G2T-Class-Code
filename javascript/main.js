@@ -45,9 +45,71 @@ num = 10;
 
 console.log(num === 10);
 console.log(num !== 29);
+console.log(num > 10);
+console.log(num < 10);
+console.log(num >= 10);
+console.log(num <= 10);
+
+// Logical Operators //
+console.log(true && true); // AND 
+console.log(true && false); // AND 
+console.log(10 === 10 && 10 % 2 === 1); // AND 
+
+var nathan = "cool";
+var todd = "old";
+
+console.log(nathan == "cool" && todd == "supercool"); // AND
+
+console.log(nathan == "cool" || todd == "old"); // OR
+console.log(nathan == "cool" || todd == "has swag"); // OR
+console.log(num === 10 || num % 2 === 1); // OR
+
+console.log(!false);
+console.log(!true);
+console.log(!num);
+
+/* Datatypes */
+
+console.log(10 === "10");
+
+console.log(typeof 10)          // Number
+console.log(typeof "10")        // String
+console.log(typeof 1.4444)      // Number :,(
+console.log(typeof true)        // Boolean
+console.log(typeof Number)      // Function
+console.log(typeof document)    // Object
+console.log(typeof num)         // Number
 
 
+/* Conditional Statements (if / else if / else) */
 
-// Loop //
-// for(let i = 0; i < 10; i++)
-//    console.log(i);
+var nathan_age = 2222222;
+
+if(nathan_age < 16)
+    console.log("You are not allowed to drive or vote! Your age is " + nathan_age);
+else if(nathan_age < 18)
+    console.log("You are allowed to drive but not vote! Your age is " + nathan_age);
+else if(nathan_age < 21)
+    console.log("You are allowed to drive and vote and you are happy! Your age is " + nathan_age)
+else
+    console.log("You are an old man and berry sad! Enjoy your pension. Your age is " + nathan_age)
+
+if(nathan_age % 2 === 0)
+    console.log("Nathan's age is even!")
+else
+    console.log("Nathan's age is odd!")
+
+/* Loops */
+
+// While Loop //
+var increment = 0; // Counter
+while(increment < 10) { // Check
+    console.log("I'm gonna crash")
+    increment++; // Increment
+}
+    
+// For Loop //
+// ( Counter ; Check ; Increment ) 
+for(let i = 0; i < 10; i++)
+    console.log("I'm gonna crash")
+
