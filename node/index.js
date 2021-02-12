@@ -34,7 +34,7 @@ app.get("/manuscript", (req, res) => {
 })
 
 // EJS Example //
-app.get("favorite_foods", (req, res) => {
+app.get("/favorite_foods", (req, res) => {
     var fav_foods = ["Taco", "Steak", "Pizza", "Cheese Slice", "Travis Scott Burger"];
     res.render("favfoods.ejs", {foods: fav_foods})
 })
