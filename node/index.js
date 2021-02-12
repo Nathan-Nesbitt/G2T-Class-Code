@@ -12,5 +12,9 @@ app.get("/", (request, response) => {
     response.send("HELLO WORLD!");
 })
 
+app.get("/tea", (request, response) => {
+    response.send("🍵🍵🍵🍵🍵🍵🍵🍵");
+})
+
 // Start the server //
-app.listen(port);
+app.listen(port, () => {console.log("RUNNING")});
