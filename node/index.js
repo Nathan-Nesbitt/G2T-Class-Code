@@ -13,7 +13,16 @@ app.get("/", (request, response) => {
 })
 
 app.get("/tea", (request, response) => {
-    response.send("🍵🍵🍵🍵🍵🍵🍵🍵");
+    response.send("🍵");
+})
+
+app.get("/homepage", (req, res) => {
+    res.send("<h1>Welcome 2 my homepage</h1>")
+})
+
+// Creates a /gator endpoint //
+app.get("/gator", (req, res) => {
+    res.send("🐊")
 })
 
 // Start the server //
