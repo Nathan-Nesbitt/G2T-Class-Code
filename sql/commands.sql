@@ -16,3 +16,12 @@ CREATE TABLE people (
 
 /* Show tables */
 SHOW TABLES;
+
+/* Inserting people into database */
+
+INSERT INTO people(SIN, name) VALUES (111111111, "Nathan");
+INSERT INTO people(SIN, name) VALUES (123456789, "Onur");
+INSERT INTO people(SIN, name) VALUES (111111112, "Nisa");
+INSERT INTO people(SIN, name) VALUES (111111113, "Cai");
+INSERT INTO people(SIN, name) VALUES (111111114, "Cai");
+INSERT INTO people(SIN, name) VALUES (111111115, "Lucas");
