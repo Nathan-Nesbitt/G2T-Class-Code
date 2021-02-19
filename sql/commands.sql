@@ -54,3 +54,22 @@ CREATE TABLE FavFoodTable (
     Amount INT, /* Amount of that food */
     FOREIGN KEY (SIN) REFERENCES people(SIN)
 );
+
+/* Insert a favorite food into the database */
+
+/* Insert value into FavFoodTable */
+INSERT INTO FavFoodTable(SIN, FavFood, Amount) VALUES (111111111, "Ice", 1000000000);
+INSERT INTO FavFoodTable(SIN, FavFood, Amount) VALUES (123456789, "Pasta", 2);
+
+/* Delete a row */
+DELETE FROM FavFoodTable WHERE SIN = 123456789;
+
+/* Update a row */
+UPDATE FavFoodTable SET FavFood = "Salad" WHERE SIN = 111111111;
+
+/* Alter table change column name */
+ALTER TABLE FavFoodTable RENAME COLUMN FavFood TO FavoriteFood;
+ALTER TABLE FavFoodTable RENAME COLUMN FavoriteFood TO FavFood;
+
+/* Join Tables */
+SELECT name, people.SIN, FavFood, Amount FROM people INNER JOIN FavFoodTable ON people.SIN = FavFoodTable.SIN;
