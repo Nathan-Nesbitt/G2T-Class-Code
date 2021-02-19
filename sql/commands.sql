@@ -73,3 +73,12 @@ ALTER TABLE FavFoodTable RENAME COLUMN FavoriteFood TO FavFood;
 
 /* Join Tables */
 SELECT name, people.SIN, FavFood, Amount FROM people INNER JOIN FavFoodTable ON people.SIN = FavFoodTable.SIN;
+
+/* Create account in MySQL */
+CREATE USER 'G2T'@'localhost' IDENTIFIED BY "password";
+
+/* Grant access to a specific database for a user */
+GRANT ALL ON G2T.* TO 'G2T'@'localhost';
+
+/* Save the settings */
+FLUSH PRIVILEGES;
