@@ -46,3 +46,11 @@ SELECT name, SIN FROM people WHERE name LIKE "_n%";
 
 /* Select all the people whose first and last letter of their name is n */
 SELECT name, SIN FROM people WHERE name LIKE "n%n";
+
+/* Creating the FavFoodTable */
+CREATE TABLE FavFoodTable (
+    SIN INT NOT NULL, /* SIN Number that is not null */
+    FavFood VARCHAR(200), /* Food in our database */
+    Amount INT, /* Amount of that food */
+    FOREIGN KEY (SIN) REFERENCES people(SIN)
+);
