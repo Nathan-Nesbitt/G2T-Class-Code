@@ -77,6 +77,9 @@ SELECT name, people.SIN, FavFood, Amount FROM people INNER JOIN FavFoodTable ON 
 /* Create account in MySQL */
 CREATE USER 'G2T'@'localhost' IDENTIFIED BY "password";
 
+/* IF YOU ARE RUNNING MYSQL 8 */
+ALTER USER 'G2T'@'localhost' IDENTIFIED WITH mysql_native_password BY "password";
+
 /* Grant access to a specific database for a user */
 GRANT ALL ON G2T.* TO 'G2T'@'localhost';
 

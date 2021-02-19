@@ -32,7 +32,7 @@ app.get("/", (req, res) => {
 })
 
 app.post("/add_person", (req, res) => {
-    connection.query("")
+    connection.query("INSERT INTO people(SIN, name) VALUES (?, ?)", req.body.SIN, req.body.name)
     res.redirect("/");
 })
 
