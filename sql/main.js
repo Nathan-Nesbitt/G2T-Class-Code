@@ -28,15 +28,21 @@ connection.connect();
 
 // Set an endpoint //
 app.get("/", (req, res) => {
+    // Get information from the database //
     connection.query("SELECT name, SIN FROM people", (err, result) => {
+        // If there is an error in the request to the database //
         if(err)
             console.log("ERROR!" + err)
+        // Render the main file using the data from the database //
         res.render("index.ejs", {people: result})
     })
 })
 
+// Set a POST endpoint for creating a user //
 app.post("/add_person", (req, res) => {
+    // Create a new person in the database //
     connection.query("INSERT INTO people(SIN, name) VALUES (?, ?)", [req.body.SIN, req.body.name])
+    // Redirect back into the main file //
     res.redirect("/");
 })
 
