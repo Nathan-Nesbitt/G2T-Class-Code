@@ -28,11 +28,15 @@ connection.connect();
 
 // Set an endpoint //
 app.get("/", (req, res) => {
-    res.render("index.ejs")
+    connection.query("SELECT name, SIN FROM people", (err, result) => {
+        if(err)
+            console.log("ERROR!" + err)
+        res.render("index.ejs", {people: result})
+    })
 })
 
 app.post("/add_person", (req, res) => {
-    connection.query("INSERT INTO people(SIN, name) VALUES (?, ?)", req.body.SIN, req.body.name)
+    connection.query("INSERT INTO people(SIN, name) VALUES (?, ?)", [req.body.SIN, req.body.name])
     res.redirect("/");
 })
 

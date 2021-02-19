@@ -3,3 +3,6 @@
     <input name="name" type="text" placeholder="name">
     <button type="submit">Add Person</button>
 </form>
+<% people.forEach(person => {%>
+    <p><%= person.name %>, <%= person.SIN %> </p>
+<% }) %>
