@@ -64,7 +64,7 @@ INSERT INTO FavFoodTable(SIN, FavFood, Amount) VALUES (123456789, "Pasta", 2);
 /* Delete a row */
 DELETE FROM FavFoodTable WHERE SIN = 123456789;
 
-/* Update a row */
+/* Update a row */ 
 UPDATE FavFoodTable SET FavFood = "Salad" WHERE SIN = 111111111;
 
 /* Alter table change column name */
