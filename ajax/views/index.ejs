@@ -10,16 +10,30 @@
                 <input id="input_name" name="person" type="text" placeholder="Name">
                 <button id="button">Add Person!</button>
             </section>
+            <section id="people">
+
+            </section>
         </main>
     </body>
     <script>
         var button = document.getElementById("button");
         var user_input = document.getElementById("input_name");
+        var people = document.getElementById("people");
+        
         button.addEventListener("click", () => {
             var name = user_input.value;
 
             // Step 1 - Create an XMLHttpRequest object //
             var xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function() {
+                if(this.readyState == 4 && this.status == 200) {
+                    var tag = document.createElement("p");
+                    var text = document.createTextNode(user_input.value);
+                    tag.appendChild(text);
+                    people.appendChild(tag);
+                }
+            }
 
             // Step 2 - Open a connection to the server //
             xhr.open("POST", "/create_person");
@@ -30,5 +44,33 @@
             // Step 4 - Send the data to the server //
             xhr.send("person=" + name)
         })
+
+        window.addEventListener("load", () => {
+            // When the page loads we run the following code //
+
+            // Step 1 - Create a new request object //
+            var xhr = new XMLHttpRequest();
+
+            // Step 2 - When we get a response, do the following //
+            xhr.onreadystatechange = function() {
+                if(this.readyState == 4 && this.status == 200) {
+                    var response = JSON.parse(this.responseText)
+                    response.forEach(person => {
+                        var tag = document.createElement("p");
+                        var text = document.createTextNode(person);
+                        tag.appendChild(text);
+                        people.appendChild(tag);
+                    })
+                }
+            }
+
+            // Step 3 - Open a connection to the server using a GET //
+            xhr.open("GET", "/get_all_people");
+
+            // Step 4 - Requesting the data from the server //
+            xhr.send()
+        })
+
+
     </script>
 </html>

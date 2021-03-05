@@ -11,14 +11,14 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 // people array //
-var people = ["Nathan"];
+var people = [];
 
 app.get("/", (req, res) => {
     res.render("index.ejs")
 })
 
 app.get("/get_all_people", (req, res) => {
-    res.send(people)
+    res.send(JSON.stringify(people))
 })
 
 app.post("/create_person", (req, res) => {
