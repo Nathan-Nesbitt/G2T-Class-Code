@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <main>
+            <section id="names">
+                <h1>Names of people in my website!</h1>
+                <input id="input_name" name="person" type="text" placeholder="Name">
+                <button id="button">Add Person!</button>
+            </section>
+        </main>
+    </body>
+    <script>
+        var button = document.getElementById("button");
+        var user_input = document.getElementById("input_name");
+        button.addEventListener("click", () => {
+            var name = user_input.value;
+
+            // Step 1 - Create an XMLHttpRequest object //
+            var xhr = new XMLHttpRequest();
+
+            // Step 2 - Open a connection to the server //
+            xhr.open("POST", "/create_person");
+
+            // Step 3 - Set content type //
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+
+            // Step 4 - Send the data to the server //
+            xhr.send("person=" + name)
+        })
+    </script>
+</html>
